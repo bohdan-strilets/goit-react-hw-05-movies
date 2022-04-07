@@ -1,5 +1,5 @@
-import MovieCard from 'components/MovieCard';
 import propTypes from 'prop-types';
+import MovieCard from 'components/MovieCard';
 
 function MoviesList({ movies }) {
   return (

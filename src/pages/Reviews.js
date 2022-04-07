@@ -25,7 +25,11 @@ function Reviews() {
     });
   }, [movieId]);
 
-  return reviews && <ReviewsList reviews={reviews} />;
+  return reviews && reviews.length > 0 ? (
+    <ReviewsList reviews={reviews} />
+  ) : (
+    <h2>We don't have any reviews for this movie.</h2>
+  );
 }
 
 export default Reviews;

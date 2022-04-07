@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import propTypes from 'prop-types';
-import posterBg from './poster.jpg';
+import posterBg from '../../utilities/images/poster.jpg';
 
 function MovieDetails({ movieInfo }) {
   const {

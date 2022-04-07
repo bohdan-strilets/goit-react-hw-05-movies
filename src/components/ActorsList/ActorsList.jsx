@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import actorBg from './actor.png';
+import actorBg from '../../utilities/images/actor.png';
 
 function ActorsList({ actors }) {
   return (
