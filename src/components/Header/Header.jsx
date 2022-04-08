@@ -1,21 +1,22 @@
 import { NavLink } from 'react-router-dom';
 import propTypes from 'prop-types';
 import { FaFilm } from 'react-icons/fa';
+import { HeaderWrapper, Title, List, Item } from './Header.styled';
 
 function Header({ title }) {
   return (
-    <>
+    <HeaderWrapper>
       <FaFilm />
-      <h1>{title}</h1>
-      <ul>
-        <li>
+      <Title>{title}</Title>
+      <List>
+        <Item>
           <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <NavLink to="/movies">Movies</NavLink>
-        </li>
-      </ul>
-    </>
+        </Item>
+      </List>
+    </HeaderWrapper>
   );
 }
 

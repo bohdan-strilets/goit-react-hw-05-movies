@@ -1,8 +1,11 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import propTypes from 'prop-types';
 import posterBg from '../../utilities/images/poster.jpg';
 
 function MovieDetails({ movieInfo }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const {
     title,
     genres,
@@ -13,8 +16,13 @@ function MovieDetails({ movieInfo }) {
     voteCount,
   } = movieInfo;
 
+  const onGoBack = () => navigate(location?.state?.from ?? '/');
+
   return (
     <div>
+      <button type="button" onClick={onGoBack}>
+        Go back
+      </button>
       <div>
         <img
           src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : posterBg}

@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import propTypes from 'prop-types';
 import posterBg from '../../utilities/images/poster.jpg';
 
 function MovieCard({ id, title, poster, voteAverage, voteCount }) {
+  const location = useLocation();
+
   return (
     <li>
-      <Link to={`/movies/${id}`}>
+      <Link to={`/movies/${id}`} state={{ from: location }}>
         <p>{title}</p>
         <img
           src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : posterBg}
