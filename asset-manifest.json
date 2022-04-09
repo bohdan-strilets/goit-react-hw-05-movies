@@ -1,15 +1,27 @@
 {
   "files": {
     "main.css": "/react-project-template/static/css/main.cb83e79c.css",
-    "main.js": "/react-project-template/static/js/main.76e80fb1.js",
+    "main.js": "/react-project-template/static/js/main.6bb4a74f.js",
+    "home-page.js": "/react-project-template/static/js/home-page.26f37300.chunk.js",
+    "movies-page.js": "/react-project-template/static/js/movies-page.7a442407.chunk.js",
+    "movie-details-page.js": "/react-project-template/static/js/movie-details-page.68af25f9.chunk.js",
+    "cast-view.js": "/react-project-template/static/js/cast-view.440521be.chunk.js",
+    "review-view.js": "/react-project-template/static/js/review-view.112e2e41.chunk.js",
+    "static/js/105.cbb8579c.chunk.js": "/react-project-template/static/js/105.cbb8579c.chunk.js",
     "static/media/actor.png": "/react-project-template/static/media/actor.015401e8db7d127faefa.png",
     "static/media/poster.jpg": "/react-project-template/static/media/poster.f55d248454cd0ab3bc5b.jpg",
     "index.html": "/react-project-template/index.html",
     "main.cb83e79c.css.map": "/react-project-template/static/css/main.cb83e79c.css.map",
-    "main.76e80fb1.js.map": "/react-project-template/static/js/main.76e80fb1.js.map"
+    "main.6bb4a74f.js.map": "/react-project-template/static/js/main.6bb4a74f.js.map",
+    "home-page.26f37300.chunk.js.map": "/react-project-template/static/js/home-page.26f37300.chunk.js.map",
+    "movies-page.7a442407.chunk.js.map": "/react-project-template/static/js/movies-page.7a442407.chunk.js.map",
+    "movie-details-page.68af25f9.chunk.js.map": "/react-project-template/static/js/movie-details-page.68af25f9.chunk.js.map",
+    "cast-view.440521be.chunk.js.map": "/react-project-template/static/js/cast-view.440521be.chunk.js.map",
+    "review-view.112e2e41.chunk.js.map": "/react-project-template/static/js/review-view.112e2e41.chunk.js.map",
+    "105.cbb8579c.chunk.js.map": "/react-project-template/static/js/105.cbb8579c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb83e79c.css",
-    "static/js/main.76e80fb1.js"
+    "static/js/main.6bb4a74f.js"
   ]
 }
