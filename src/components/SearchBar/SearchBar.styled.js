@@ -12,7 +12,7 @@ export const FormSearch = styled.form`
 `;
 
 export const InputSearch = styled.input`
-  width: 800px;
+  width: 200px;
   height: 30px;
 
   padding: 0 10px 0 10px;
@@ -20,6 +20,10 @@ export const InputSearch = styled.input`
 
   border: 1px solid ${secondBgColor};
   outline: none;
+
+  @media (min-width: 768px) {
+    width: 800px;
+  }
 `;
 
 export const ButtonSubmit = styled.button`
@@ -27,7 +31,7 @@ export const ButtonSubmit = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: 150px;
+  width: 100px;
   height: 30px;
   margin-bottom: 30px;
 
@@ -44,5 +48,9 @@ export const ButtonSubmit = styled.button`
   :hover {
     background-color: ${accentBgColor};
     color: ${secondTextColor};
+  }
+
+  @media (min-width: 768px) {
+    width: 150px;
   }
 `;

@@ -48,6 +48,7 @@ function MovieDetails({ movieInfo }) {
         <FaChevronLeft />
         <Label>Go back</Label>
       </ButtonGoBack>
+
       <MainWrapper>
         <Poster
           src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : posterBg}

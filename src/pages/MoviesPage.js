@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import getSearchMovies from 'API/get-search-movies';
 import SearchBar from 'components/SearchBar';
+import Container from 'components/Container';
 import MoviesList from 'components/MoviesList';
 
 function MoviesPage() {
@@ -37,7 +38,11 @@ function MoviesPage() {
   return (
     <>
       <SearchBar />
-      {movies && <MoviesList movies={movies} />}
+      {movies && (
+        <Container isPadding>
+          <MoviesList movies={movies} />
+        </Container>
+      )}
     </>
   );
 }

@@ -2,14 +2,22 @@ import styled from '@emotion/styled';
 import { accentTextColor } from 'utilities/variables/css';
 
 export const List = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  margin: -10px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
 `;
 
 export const Item = styled.li`
-  width: calc((100% - 10px * 8) / 4);
-  margin: 10px;
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 768px) {
+    width: calc((100% - 10px * 8) / 4);
+    margin: 10px;
+  }
 `;
 
 export const PhotoWrapper = styled.div`

@@ -39,64 +39,109 @@ export const Label = styled.span`
 `;
 
 export const MainWrapper = styled.div`
-  display: flex;
   margin-bottom: 100px;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const Poster = styled.img`
-  width: 400px;
+  width: 300px;
+
+  @media (min-width: 768px) {
+    width: 400px;
+  }
 `;
 
 export const InfoWrapper = styled.div`
-  margin-left: 50px;
+  @media (min-width: 768px) {
+    margin-left: 50px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const Title = styled.h2`
-  font-size: 50px;
+  font-size: 30px;
   color: ${accentTextColor};
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
 `;
 
 export const ReleaseDate = styled.p`
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+  }
 `;
 
 export const GenresList = styled.ul`
-  display: flex;
   margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const GenresItem = styled.li`
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   margin-right: 15px;
 
   :last-child {
     margin-right: 0;
   }
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+  }
 `;
 
 export const Description = styled.p`
   line-height: 2;
-  font-size: 18px;
+  font-size: 15px;
   margin-bottom: 50px;
+
+  @media (min-width: 1440px) {
+    font-size: 18px;
+  }
 `;
 
 export const VoteWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const VoteAverage = styled.p`
   font-size: 18px;
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const VoteCount = styled.p`

@@ -27,8 +27,16 @@ export const CustomIcon = styled(FaFilm)`
 `;
 
 export const Title = styled.h1`
-  font-size: 50px;
+  font-size: 25px;
   color: ${secondTextColor};
+
+  @media (min-width: 768px) {
+    font-size: 35px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 50px;
+  }
 `;
 
 export const NavigationList = styled.ul`
@@ -44,7 +52,7 @@ export const Item = styled.li`
 `;
 
 export const CustomLink = styled(NavLink)`
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   color: ${mainTextColor};
   transition: color ${mainHoverEfect};
@@ -55,5 +63,9 @@ export const CustomLink = styled(NavLink)`
 
   :hover {
     color: ${secondTextColor};
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
   }
 `;
