@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import getMovieReviews from 'API/get-movie-reviews';
 import ReviewsList from 'components/ReviewsList';
+import Container from 'components/Container';
 
 function Reviews() {
   const { movieId } = useParams();
@@ -28,7 +29,9 @@ function Reviews() {
   return reviews && reviews.length > 0 ? (
     <ReviewsList reviews={reviews} />
   ) : (
-    <h2>We don't have any reviews for this movie.</h2>
+    <Container isPadding>
+      <h2>We don't have any reviews for this movie.</h2>
+    </Container>
   );
 }
 

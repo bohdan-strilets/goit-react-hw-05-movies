@@ -1,22 +1,26 @@
 import propTypes from 'prop-types';
 import MovieCard from 'components/MovieCard';
+import Container from 'components/Container';
+import { Wrapper } from './MoviesList.styled';
 
 function MoviesList({ movies }) {
   return (
-    <ul>
-      {movies.map(({ id, title, poster, voteAverage, voteCount }) => {
-        return (
-          <MovieCard
-            key={id}
-            id={id}
-            title={title}
-            poster={poster}
-            voteAverage={voteAverage}
-            voteCount={voteCount}
-          />
-        );
-      })}
-    </ul>
+    <Container>
+      <Wrapper>
+        {movies.map(({ id, title, poster, voteAverage, voteCount }) => {
+          return (
+            <MovieCard
+              key={id}
+              id={id}
+              title={title}
+              poster={poster}
+              voteAverage={voteAverage}
+              voteCount={voteCount}
+            />
+          );
+        })}
+      </Wrapper>
+    </Container>
   );
 }
 

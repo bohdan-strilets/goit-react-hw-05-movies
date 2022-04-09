@@ -1,4 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
+import Container from 'components/Container';
+import { FormSearch, InputSearch, ButtonSubmit } from './SearchBar.styled';
+import { FaSearch } from 'react-icons/fa';
 
 function SearchBar() {
   const location = useLocation();
@@ -15,10 +18,14 @@ function SearchBar() {
   }
 
   return (
-    <form onSubmit={onSubmitForm}>
-      <input type="text" name="query" />
-      <button type="submit">search</button>
-    </form>
+    <Container>
+      <FormSearch onSubmit={onSubmitForm}>
+        <InputSearch type="text" name="query" />
+        <ButtonSubmit type="submit">
+          <FaSearch />
+        </ButtonSubmit>
+      </FormSearch>
+    </Container>
   );
 }
 

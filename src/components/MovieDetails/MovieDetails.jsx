@@ -1,6 +1,30 @@
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import propTypes from 'prop-types';
 import posterBg from '../../utilities/images/poster.jpg';
+import Container from 'components/Container';
+import {
+  ButtonGoBack,
+  Label,
+  MainWrapper,
+  Poster,
+  InfoWrapper,
+  TitleWrapper,
+  Title,
+  ReleaseDate,
+  GenresList,
+  GenresItem,
+  Description,
+  VoteWrapper,
+  VoteAverage,
+  VoteCount,
+  Value,
+  AdditionalWrapper,
+  AdditionalTitle,
+  NavigationsList,
+  NavigationsItem,
+  CustomLink,
+} from './MovieDetails.styled';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 function MovieDetails({ movieInfo }) {
   const location = useLocation();
@@ -19,44 +43,55 @@ function MovieDetails({ movieInfo }) {
   const onGoBack = () => navigate(location?.state?.from ?? '/');
 
   return (
-    <div>
-      <button type="button" onClick={onGoBack}>
-        Go back
-      </button>
-      <div>
-        <img
+    <Container>
+      <ButtonGoBack type="button" onClick={onGoBack}>
+        <FaChevronLeft />
+        <Label>Go back</Label>
+      </ButtonGoBack>
+      <MainWrapper>
+        <Poster
           src={poster ? `https://image.tmdb.org/t/p/w500/${poster}` : posterBg}
           alt={title}
         />
-        <div>
-          <div>
-            <h2>{title}</h2>
-            <p>{releaseDate}</p>
-          </div>
-          <ul>
-            {genres.map(({ name, id }) => (
-              <li key={id}>{name}</li>
-            ))}
-          </ul>
-          <p>{description}</p>
-          <div>
-            <p>{voteAverage}</p>
-            <p>{voteCount}</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <p>Additional Information</p>
-        <ul>
-          <li>
-            <NavLink to="cast">Cast</NavLink>
-          </li>
-          <li>
-            <NavLink to="reviews">Reviews</NavLink>
-          </li>
-        </ul>
-      </div>
-    </div>
+        <InfoWrapper>
+          <TitleWrapper>
+            <Title>{title}</Title>
+            <ReleaseDate>{releaseDate}</ReleaseDate>
+          </TitleWrapper>
+          <GenresList>
+            {genres &&
+              genres.map(({ name, id }) => (
+                <GenresItem key={id}>{name}</GenresItem>
+              ))}
+          </GenresList>
+          <Description>{description}</Description>
+          <VoteWrapper>
+            <VoteAverage>
+              Vote average: <Value>{voteAverage}</Value>
+            </VoteAverage>
+            <VoteCount>
+              Vote count: <Value>{voteCount}</Value>
+            </VoteCount>
+          </VoteWrapper>
+        </InfoWrapper>
+      </MainWrapper>
+
+      <AdditionalWrapper>
+        <AdditionalTitle>Additional Information</AdditionalTitle>
+        <NavigationsList>
+          <NavigationsItem>
+            <CustomLink to="cast">
+              <FaChevronRight /> Cast
+            </CustomLink>
+          </NavigationsItem>
+          <NavigationsItem>
+            <CustomLink to="reviews">
+              <FaChevronRight /> Reviews
+            </CustomLink>
+          </NavigationsItem>
+        </NavigationsList>
+      </AdditionalWrapper>
+    </Container>
   );
 }
 

@@ -9,19 +9,18 @@ function HomePage() {
     getTrending().then(({ results }) => {
       const moviesArr = [];
 
-      results.map(
-        ({ id, original_name, poster_path, vote_average, vote_count }) => {
-          const movie = {
-            id,
-            title: original_name,
-            poster: poster_path,
-            voteAverage: vote_average,
-            voteCount: vote_count,
-          };
+      results.map(({ id, title, poster_path, vote_average, vote_count }) => {
+        const movie = {
+          id,
+          title,
 
-          return moviesArr.push(movie);
-        },
-      );
+          poster: poster_path,
+          voteAverage: vote_average,
+          voteCount: vote_count,
+        };
+
+        return moviesArr.push(movie);
+      });
 
       setMovies(moviesArr);
     });

@@ -7,7 +7,7 @@ import MovieDetailsPage from 'pages/MovieDetailsPage';
 function App() {
   return (
     <>
-      <Header title="Movie search" />
+      <Header title="MOVIE.search" />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
