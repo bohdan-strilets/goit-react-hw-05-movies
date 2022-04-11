@@ -17,10 +17,10 @@ function MoviesPage() {
         const moviesArr = [];
 
         results.map(
-          ({ id, original_name, poster_path, vote_average, vote_count }) => {
+          ({ id, original_title, poster_path, vote_average, vote_count }) => {
             const movie = {
               id,
-              title: original_name,
+              title: original_title,
               poster: poster_path,
               voteAverage: vote_average,
               voteCount: vote_count,

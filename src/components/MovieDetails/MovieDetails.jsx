@@ -40,7 +40,7 @@ function MovieDetails({ movieInfo }) {
     voteCount,
   } = movieInfo;
 
-  const onGoBack = () => navigate(location?.state?.from ?? '/');
+  const onGoBack = () => navigate(location?.state?.from?.state?.from ?? '/');
 
   return (
     <Container>
@@ -81,12 +81,12 @@ function MovieDetails({ movieInfo }) {
         <AdditionalTitle>Additional Information</AdditionalTitle>
         <NavigationsList>
           <NavigationsItem>
-            <CustomLink to="cast">
+            <CustomLink to="cast" state={{ from: location }}>
               <FaChevronRight /> Cast
             </CustomLink>
           </NavigationsItem>
           <NavigationsItem>
-            <CustomLink to="reviews">
+            <CustomLink to="reviews" state={{ from: location }}>
               <FaChevronRight /> Reviews
             </CustomLink>
           </NavigationsItem>
