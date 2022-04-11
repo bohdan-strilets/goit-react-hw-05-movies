@@ -36,7 +36,7 @@ non-existent route, it must be redirected to the home page.
 - `/movies/:movieId/reviews` - component `<Reviews>`, review information.
   Rendered on the page `<MovieDetailsPage>`.
 
-## Code Splitting (разделение кода)
+## Code Splitting
 
 Add asynchronous JS code loading for app routes using `React.lazy()` and
 `Suspense`.

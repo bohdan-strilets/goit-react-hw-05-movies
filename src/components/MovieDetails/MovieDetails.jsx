@@ -40,7 +40,10 @@ function MovieDetails({ movieInfo }) {
     voteCount,
   } = movieInfo;
 
-  const onGoBack = () => navigate(location?.state?.from?.state?.from ?? '/');
+  const onGoBack = () =>
+    location.state.from.search
+      ? navigate(location?.state?.from ?? '/')
+      : navigate(location?.state?.from?.state?.from ?? '/');
 
   return (
     <Container>
