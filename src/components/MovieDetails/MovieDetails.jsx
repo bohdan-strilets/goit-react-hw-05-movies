@@ -29,6 +29,7 @@ import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 function MovieDetails({ movieInfo }) {
   const location = useLocation();
   const navigate = useNavigate();
+  const subLocation = location.state.from;
 
   const {
     title,
@@ -40,10 +41,7 @@ function MovieDetails({ movieInfo }) {
     voteCount,
   } = movieInfo;
 
-  const onGoBack = () =>
-    location.state.from.search
-      ? navigate(location?.state?.from ?? '/')
-      : navigate(location?.state?.from?.state?.from ?? '/');
+  const onGoBack = () => navigate(location?.state?.from ?? '/');
 
   return (
     <Container>
@@ -84,12 +82,12 @@ function MovieDetails({ movieInfo }) {
         <AdditionalTitle>Additional Information</AdditionalTitle>
         <NavigationsList>
           <NavigationsItem>
-            <CustomLink to="cast" state={{ from: location }}>
+            <CustomLink to="cast" state={{ from: subLocation }}>
               <FaChevronRight /> Cast
             </CustomLink>
           </NavigationsItem>
           <NavigationsItem>
-            <CustomLink to="reviews" state={{ from: location }}>
+            <CustomLink to="reviews" state={{ from: subLocation }}>
               <FaChevronRight /> Reviews
             </CustomLink>
           </NavigationsItem>
